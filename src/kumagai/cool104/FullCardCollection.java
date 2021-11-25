@@ -1,6 +1,6 @@
 package kumagai.cool104;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  * 全カードのコレクション。

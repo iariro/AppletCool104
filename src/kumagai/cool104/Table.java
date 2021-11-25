@@ -1,6 +1,6 @@
 package kumagai.cool104;
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * カードを５枚並べる場。

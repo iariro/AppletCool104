@@ -1,6 +1,9 @@
 package kumagai.cool104;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Random;
 
 /**
  * シャッフル済みカードコレクション。
