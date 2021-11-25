@@ -1,0 +1,54 @@
+<project default="zip">
+
+	<!-- Applet Cool 104 build.xml -->
+
+	<property file="../../../../../../build.properties" />
+
+	<target name="zip">
+		<zip
+			destfile="${PDA_HOME}/Temp/AppletCool104.zip"
+			basedir=".."
+			includes="project/**"
+			excludes="project/bin/**" />
+	</target>
+
+	<target name="codeguess">
+		<taskdef name="codeguess" classname="kumagai.codeguess.CodeGuessTask" classpath="${JAVAPROJECTCHECKER_LIB}" />
+		<codeguess targetfilepath="src/" >
+			<exclude extension="java" code="UTF-8" />
+		</codeguess>
+	</target>
+
+	<target name="javadoc">
+		<javadoc
+			destdir="../javadoc"
+			sourcepath="src"
+			encoding="utf-8"
+			classpath="${XALAN_LIB};${KTOOL_LIB};${SERVLET_LIB};${STRUTS_LIB};${JUNIT_LIB};${SQLSERVER_JDBC_LIB}">
+		</javadoc>
+	</target>
+
+	<target name="onegame">
+		<java
+			classname="kumagai.cool104.OneGameMain"
+			classpath="bin">
+			<arg value="23"/>
+		</java>
+	</target>
+
+	<target name="souatari">
+		<java
+			classname="kumagai.cool104.SouatariMain"
+			classpath="bin">
+			<arg value="100"/>
+		</java>
+	</target>
+
+	<target name="cool104">
+		<java
+			classname="kumagai.cool104.Cool104Main"
+			classpath="bin">
+		</java>
+	</target>
+
+</project>
